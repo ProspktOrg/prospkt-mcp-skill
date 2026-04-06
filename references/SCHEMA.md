@@ -102,5 +102,10 @@ Annual financial filings.
 | ebe | BIGINT | EBITDA |
 | tauxEndettement | FLOAT | Debt ratio |
 
+### unitelegale (source table — NOT in mv_company_basic)
+Contains fields like `etatAdministratifUniteLegale` ('A' = active, 'F' = closed).
+To filter active companies, JOIN: `JOIN unitelegale u ON u.siren = basic.siren WHERE u."etatAdministratifUniteLegale" = 'A'`
+Note: mv_company_basic does NOT contain this column — you must JOIN unitelegale.
+
 ### linkedin_companies, linkedin_jobs, linkedin_profiles, etablissement, avisBodacc
 Additional tables — use `describe_data` for full column list.

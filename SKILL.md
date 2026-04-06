@@ -18,36 +18,51 @@ Prospkt MCP gives your AI direct access to the most comprehensive French B2B dat
 - **330K+ LinkedIn profiles** matched to SIREN
 - **274K+ contract attributions**
 
-## Setup (3 steps)
+## Setup
 
-### 1. Get Your API Key
+### Step 0: Check if Prospkt MCP is already installed
 
-Go to **https://app.prospkt.fr/pages/account-settings-api-keys** → "Nouvelle clé" → copy the `psk_...` key (shown only once).
+Before doing anything, verify if the MCP server is already configured:
 
-> If the user hasn't created a key yet: guide them to the URL, wait, then ask them to paste the `psk_` key.
+**For Claude Desktop/Code**: check if `~/.config/claude/claude_desktop_config.json` contains a `"prospkt"` entry.
+**For Cursor**: check if `.cursor/mcp.json` contains a `"prospkt"` entry.
 
-### 2. Configure Your AI
+If it's already configured, try calling `list_signal_types` to verify the connection works.
+If it works → skip to "Available Tools" below. If it fails or isn't configured → continue with Step 1.
 
-**Claude Desktop** — add to `~/.config/claude/claude_desktop_config.json`:
+### Step 1: Get Your API Key
+
+1. Go to **https://app.prospkt.fr/pages/account-settings-api-keys**
+2. Click **"Nouvelle clé"**
+3. Enter a name (e.g., "Claude Desktop", "Cursor")
+4. **IMPORTANT**: Copy the `psk_...` key immediately — it's shown only once!
+
+> **Interactive flow**: Ask the user: "Do you already have a Prospkt API key (starts with psk_)?"
+> - If yes → ask them to paste it
+> - If no → guide them to https://app.prospkt.fr/pages/account-settings-api-keys, wait, then ask them to paste the key
+
+### Step 2: Configure Your AI
+
+**Claude Desktop / Claude Code** — add to `~/.config/claude/claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
     "prospkt": {
       "command": "npx",
       "args": ["-y", "@prospkt/mcp-server"],
-      "env": { "PROSPKT_API_KEY": "psk_your_key_here" }
+      "env": { "PROSPKT_API_KEY": "psk_YOUR_KEY_HERE" }
     }
   }
 }
 ```
 
-**Cursor / Windsurf** — add to MCP settings:
+**Cursor / Windsurf** — add to MCP settings (`.cursor/mcp.json` or IDE settings):
 ```json
 {
   "prospkt": {
     "command": "npx",
     "args": ["-y", "@prospkt/mcp-server"],
-    "env": { "PROSPKT_API_KEY": "psk_your_key_here" }
+    "env": { "PROSPKT_API_KEY": "psk_YOUR_KEY_HERE" }
   }
 }
 ```
@@ -55,13 +70,17 @@ Go to **https://app.prospkt.fr/pages/account-settings-api-keys** → "Nouvelle c
 **SSE (HTTP)** — for custom apps/n8n:
 ```bash
 npm install -g @prospkt/mcp-server
-PROSPKT_API_KEY=psk_key MCP_TRANSPORT=sse MCP_PORT=3200 prospkt-mcp
+PROSPKT_API_KEY=psk_YOUR_KEY MCP_TRANSPORT=sse MCP_PORT=3200 prospkt-mcp
 # Connect via http://localhost:3200/sse
 ```
 
-### 3. Test It
+### Step 3: Verify Installation
 
-Ask your AI: *"Search for SAS companies in Lyon with more than 50 employees"*
+After configuration, **restart your AI client** and verify:
+1. Call `list_signal_types` — should return 30 signal types
+2. Call `search_companies` with `{"limit": 1}` — should return 1 company
+
+If you get "Invalid API key", double-check the key starts with `psk_` and has no extra spaces.
 
 ## Available Tools (16)
 
