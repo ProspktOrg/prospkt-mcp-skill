@@ -1,37 +1,36 @@
-# NAF/APE Code Hierarchy
+# NAF/APE Code Hierarchy — Complete Reference
 
-Navigate by section, then drill into divisions for detailed codes.
+**985 codes** across 71 divisions and 21 sections.
 
-## Sections (21)
+## Sections
 
 | Section | Label | Divisions | File |
 |---------|-------|-----------|------|
-| A | Agriculture, sylviculture, pêche | 01-03 | [sections/A.md](sections/A.md) |
-| B | Industries extractives | 05-09 | [sections/B.md](sections/B.md) |
-| C | Industrie manufacturière | 10-33 | [sections/C.md](sections/C.md) |
-| D | Électricité, gaz | 35 | [sections/D.md](sections/D.md) |
-| E | Eau, assainissement, déchets | 36-39 | [sections/E.md](sections/E.md) |
-| F | Construction | 41-43 | [sections/F.md](sections/F.md) |
-| G | Commerce, réparation auto | 45-47 | [sections/G.md](sections/G.md) |
-| H | Transports, entreposage | 49-53 | [sections/H.md](sections/H.md) |
-| I | Hébergement, restauration | 55-56 | [sections/I.md](sections/I.md) |
-| J | Information, communication | 58-63 | [sections/J.md](sections/J.md) |
-| K | Finance, assurance | 64-66 | [sections/K.md](sections/K.md) |
-| L | Immobilier | 68 | [sections/L.md](sections/L.md) |
-| M | Activités spécialisées, scientifiques | 69-75 | [sections/M.md](sections/M.md) |
-| N | Services administratifs, soutien | 77-82 | [sections/N.md](sections/N.md) |
-| O | Administration publique | 84 | [sections/O.md](sections/O.md) |
-| P | Enseignement | 85 | [sections/P.md](sections/P.md) |
-| Q | Santé, action sociale | 86-88 | [sections/Q.md](sections/Q.md) |
-| R | Arts, spectacles, récréation | 90-93 | [sections/R.md](sections/R.md) |
-| S | Autres services | 94-96 | [sections/S.md](sections/S.md) |
-| T | Ménages employeurs | 97-98 | [sections/T.md](sections/T.md) |
-| U | Organisations extra-territoriales | 99 | [sections/U.md](sections/U.md) |
+| A | Agriculture, sylviculture, pêche | 3 div, 78 codes | [sections/A.md](sections/A.md) |
+| B | Industries extractives | 5 div, 30 codes | [sections/B.md](sections/B.md) |
+| C | Industrie manufacturière | 16 div, 314 codes | [sections/C.md](sections/C.md) |
+| D | Électricité, gaz, vapeur, air conditionné | 0 div, 0 codes | [sections/D.md](sections/D.md) |
+| E | Eau, assainissement, déchets, dépollution | 0 div, 0 codes | [sections/E.md](sections/E.md) |
+| F | Construction | 0 div, 0 codes | [sections/F.md](sections/F.md) |
+| G | Commerce, réparation d'automobiles | 2 div, 114 codes | [sections/G.md](sections/G.md) |
+| H | Transports et entreposage | 5 div, 53 codes | [sections/H.md](sections/H.md) |
+| I | Hébergement et restauration | 2 div, 19 codes | [sections/I.md](sections/I.md) |
+| J | Information et communication | 6 div, 59 codes | [sections/J.md](sections/J.md) |
+| K | Activités financières et d'assurance | 3 div, 37 codes | [sections/K.md](sections/K.md) |
+| L | Activités immobilières | 1 div, 10 codes | [sections/L.md](sections/L.md) |
+| M | Activités spécialisées, scientifiques, techniques | 7 div, 41 codes | [sections/M.md](sections/M.md) |
+| N | Activités de services administratifs et de soutien | 6 div, 68 codes | [sections/N.md](sections/N.md) |
+| O | Administration publique | 1 div, 20 codes | [sections/O.md](sections/O.md) |
+| P | Enseignement | 1 div, 23 codes | [sections/P.md](sections/P.md) |
+| Q | Santé humaine et action sociale | 3 div, 40 codes | [sections/Q.md](sections/Q.md) |
+| R | Arts, spectacles et activités récréatives | 4 div, 31 codes | [sections/R.md](sections/R.md) |
+| S | Autres activités de services | 3 div, 40 codes | [sections/S.md](sections/S.md) |
+| T | Activités des ménages en tant qu'employeurs | 2 div, 6 codes | [sections/T.md](sections/T.md) |
+| U | Activités extra-territoriales | 1 div, 2 codes | [sections/U.md](sections/U.md) |
 
-## Usage in Prospkt
-
+## Usage
 ```
-→ search_companies(naf_codes=["62.01Z"])     // Exact code
-→ search_companies(naf_sections=["J"])        // Broad section
-→ lookup_naf_tree(level="sections")           // Interactive navigation
+→ lookup_naf_tree(level="sections")
+→ lookup_naf_tree(level="divisions", section="J")
+→ search_companies(naf_codes=["62.01Z"])
 ```

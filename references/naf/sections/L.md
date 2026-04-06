@@ -1,3 +1,12 @@
-# Section L — Immobilier
+# Section L — Activités immobilières
 
-Use `lookup_naf_tree(level="divisions", section="L")` for detailed codes.
+## Divisions
+
+| Division | Codes | File |
+|----------|-------|------|
+| 68 | 6 codes | [divisions/68.md](../divisions/68.md) |
+
+## Usage
+```
+→ search_companies(naf_sections=["L"])
+```

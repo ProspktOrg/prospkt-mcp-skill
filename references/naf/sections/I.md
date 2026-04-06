@@ -1,3 +1,13 @@
-# Section I — Hébergement, restauration
+# Section I — Hébergement et restauration
 
-Use `lookup_naf_tree(level="divisions", section="I")` for detailed codes.
+## Divisions
+
+| Division | Codes | File |
+|----------|-------|------|
+| 55 | 4 codes | [divisions/55.md](../divisions/55.md) |
+| 56 | 7 codes | [divisions/56.md](../divisions/56.md) |
+
+## Usage
+```
+→ search_companies(naf_sections=["I"])
+```

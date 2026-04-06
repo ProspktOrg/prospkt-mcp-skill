@@ -1,3 +1,12 @@
 # Section O — Administration publique
 
-Use `lookup_naf_tree(level="divisions", section="O")` for detailed codes.
+## Divisions
+
+| Division | Codes | File |
+|----------|-------|------|
+| 84 | 11 codes | [divisions/84.md](../divisions/84.md) |
+
+## Usage
+```
+→ search_companies(naf_sections=["O"])
+```

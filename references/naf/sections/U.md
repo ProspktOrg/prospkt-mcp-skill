@@ -1,3 +1,12 @@
-# Section U — Organisations extra-territoriales
+# Section U — Activités extra-territoriales
 
-Use `lookup_naf_tree(level="divisions", section="U")` for detailed codes.
+## Divisions
+
+| Division | Codes | File |
+|----------|-------|------|
+| 99 | 1 codes | [divisions/99.md](../divisions/99.md) |
+
+## Usage
+```
+→ search_companies(naf_sections=["U"])
+```

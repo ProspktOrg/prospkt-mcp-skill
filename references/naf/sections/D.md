@@ -1,3 +1,11 @@
-# Section D — Électricité, gaz
+# Section D — Électricité, gaz, vapeur, air conditionné
 
-Use `lookup_naf_tree(level="divisions", section="D")` for detailed codes.
+## Divisions
+
+| Division | Codes | File |
+|----------|-------|------|
+
+## Usage
+```
+→ search_companies(naf_sections=["D"])
+```

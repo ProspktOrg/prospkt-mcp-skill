@@ -1,3 +1,11 @@
-# Section E — Eau, assainissement, déchets
+# Section E — Eau, assainissement, déchets, dépollution
 
-Use `lookup_naf_tree(level="divisions", section="E")` for detailed codes.
+## Divisions
+
+| Division | Codes | File |
+|----------|-------|------|
+
+## Usage
+```
+→ search_companies(naf_sections=["E"])
+```

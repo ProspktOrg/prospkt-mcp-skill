@@ -1,3 +1,12 @@
 # Section P — Enseignement
 
-Use `lookup_naf_tree(level="divisions", section="P")` for detailed codes.
+## Divisions
+
+| Division | Codes | File |
+|----------|-------|------|
+| 85 | 12 codes | [divisions/85.md](../divisions/85.md) |
+
+## Usage
+```
+→ search_companies(naf_sections=["P"])
+```
